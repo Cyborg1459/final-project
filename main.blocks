@@ -161,4 +161,4 @@ fbbbbf2222fd4...........
 . . . . . 6 . 7 . 7 . 6 . . . . 
 . . . . . . . 7 . 7 . . . . . . 
 . . . . . . 7 7 . 7 7 . . . . . 
-`</field></shadow></value><value name="kind"><shadow type="spritekind" id="[a9=X?%sM2IbPVQ5/WUT"><field name="MEMBER">Player</field></shadow></value></block></value></block></next></block></next></block></statement></block></xml>
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="[a9=X?%sM2IbPVQ5/WUT"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="9y^.drE+#IZpH!fv0cdV"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id=";Gahm;q5zg5c++}e,4V;"><field name="VAR" id="sgjS2SWbnbJ?j[c{~!*l">Bob</field></block></value></block></next></block></next></block></next></block></statement></block></xml>

@@ -164,3 +164,4 @@ let Bob = sprites.create(img`
     . . . . . . . 7 . 7 . . . . . . 
     . . . . . . 7 7 . 7 7 . . . . . 
     `, SpriteKind.Player)
+controller.moveSprite(Bob)
