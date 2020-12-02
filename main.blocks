@@ -162,39 +162,43 @@ fbbbbf2222fd4...........
 . . . . . . . 7 . 7 . . . . . . 
 . . . . . . 7 7 . 7 7 . . . . . 
 `</field></shadow></value><value name="kind"><shadow type="spritekind" id="[a9=X?%sM2IbPVQ5/WUT"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="game_control_sprite" id="9y^.drE+#IZpH!fv0cdV"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><block type="variables_get" id=";Gahm;q5zg5c++}e,4V;"><field name="VAR" id="sgjS2SWbnbJ?j[c{~!*l">Bob</field></block></value><next><block type="variables_set" id="^+2eh(vR`f^s*yH@`[KH"><field name="VAR" id="riD}|0$@(-JcRM0aoK!{">Lochness Monster</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="5![IktkB]=l4K#eR?8[d"><value name="img"><shadow type="screen_image_picker" id="(]-6)uGfBYePDo=5==U5"><field name="img">img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
+........................................
+........................................
+..........................fffff.........
+.........................f77777f........
+........................f777fff.........
+.......................f777f............
+......................f777f.............
+......................f77f..............
+.....................f77f...............
+.....................f77f...............
+.....................f77f...............
+.....................f777f..............
+......................f77f..............
+.......................f77f.............
+.......................f77f.............
+.......................f77f.............
+...fffffffff...........f77f.............
+..f777777777ff........f77f..............
+.f777777777777f......f77f...............
+f77777777777777f....f77f................
 `</field></shadow></value><value name="kind"><shadow type="spritekind" id="Ww]XSuPS|@wtT?jH@FOr"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="variables_set" id="eDLwf/xu+N+7y83uJyAN"><field name="VAR" id="L3}#t.JRAXQsQ}.vzx`6">Earth Monster</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="j$AxYlTS6uuX_pPZKLD3"><value name="img"><shadow type="screen_image_picker" id="{2c[;#UeJ}29-)SRKLX8"><field name="img">img`
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . 
+7 7 7 7 7 7 6 6 6 6 7 7 6 6 6 6 
+7 7 7 7 7 6 6 6 6 6 6 7 6 6 6 6 
+7 7 7 7 6 6 6 6 7 7 7 7 7 7 6 6 
+7 7 7 7 7 7 6 6 7 7 7 7 7 6 7 7 
+7 7 7 7 6 6 6 7 7 6 6 7 7 7 7 7 
+7 6 6 7 6 6 6 7 7 6 6 6 7 7 7 7 
+6 6 6 6 6 6 7 7 7 6 6 6 7 7 7 7 
+7 6 7 7 7 7 7 7 6 6 6 6 6 7 6 6 
+7 6 7 7 7 7 7 7 7 7 7 7 7 7 6 6 
+7 6 7 6 6 7 7 7 7 7 7 7 7 7 6 7 
+6 6 6 6 7 7 6 7 7 6 6 6 6 6 6 7 
+6 6 6 7 7 6 6 6 6 7 6 6 6 6 7 7 
+7 6 6 6 6 6 6 6 6 6 7 6 6 6 6 7 
+7 7 7 6 6 7 6 7 7 7 6 6 6 6 7 7 
+7 7 7 7 7 7 6 6 7 7 6 6 6 7 7 7 
+7 7 7 7 7 7 7 6 6 7 7 6 6 7 7 7 
 `</field></shadow></value><value name="kind"><shadow type="spritekind" id="15ak$mGig3;[TqUUmE3J"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="variables_set" id="U-IzCc2!?+x?=i(E)%;N"><field name="VAR" id="yD/R?,RAUIbits@OC8LU">Maze Monster</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="]Z9D##O.:KbSx_#}XJ:|"><value name="img"><shadow type="screen_image_picker" id="KSWAlv3ir4]U}(WQb9Z@"><field name="img">img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
@@ -281,7 +285,7 @@ b.b.b.bbfffbc.b.b.b.
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`</field></shadow></value><value name="kind"><shadow type="spritekind" id="SpB|BzT+O`)%K0211Q9T"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetpos" id="46XAVC,x3Fv]tO#KZgB]"><value name="sprite"><block type="variables_get" id="jTl9N%+7_;N[0rfPOccj"><field name="VAR" id="uRycrKTfWaG_Fg1fcv.E">Air Monster</field></block></value><value name="x"><shadow type="positionPicker" id="*hVynZ*=0`3AiSXKKx6l"><field name="index">0</field></shadow></value><value name="y"><shadow type="positionPicker" id="RA=ZdsEe@1o?I]T9][qO"><field name="index">0</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="variables_set" id="clnS@iCZPvsz)ZM9IJ!@" disabled="true" x="720" y="420"><field name="VAR" id="q-R!Rn|fk@l]v$hY$Cj1">Apple</field><value name="VALUE"><shadow type="math_number" id="HsWb1:dQFm-Ed+On*X~@"><field name="NUM">0</field></shadow><block type="spritescreate" id="~2d;YLGPMz_k`$EL:--w" disabled="true"><value name="img"><shadow type="screen_image_picker" id="+uSGRpooMHcW}N+?m4D_" disabled="true"><field name="img">img`
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="SpB|BzT+O`)%K0211Q9T"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetpos" id="46XAVC,x3Fv]tO#KZgB]"><value name="sprite"><block type="variables_get" id="jTl9N%+7_;N[0rfPOccj"><field name="VAR" id="uRycrKTfWaG_Fg1fcv.E">Air Monster</field></block></value><value name="x"><shadow type="positionPicker" id="*hVynZ*=0`3AiSXKKx6l"><field name="index">21</field></shadow></value><value name="y"><shadow type="positionPicker" id="RA=ZdsEe@1o?I]T9][qO"><field name="index">40</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="variables_set" id="clnS@iCZPvsz)ZM9IJ!@" disabled="true" x="720" y="420"><field name="VAR" id="q-R!Rn|fk@l]v$hY$Cj1">Apple</field><value name="VALUE"><shadow type="math_number" id="HsWb1:dQFm-Ed+On*X~@"><field name="NUM">0</field></shadow><block type="spritescreate" id="~2d;YLGPMz_k`$EL:--w" disabled="true"><value name="img"><shadow type="screen_image_picker" id="+uSGRpooMHcW}N+?m4D_" disabled="true"><field name="img">img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
