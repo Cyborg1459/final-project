@@ -120,10 +120,10 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 `</field></shadow></value><next><block type="variables_set" id="I$]Y3Pm@#.!60dvij2Uj"><field name="VAR" id="sgjS2SWbnbJ?j[c{~!*l">Bob</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="c5ta-gH=?89O@^cbw3!W"><value name="img"><shadow type="screen_image_picker" id="g|JPJwFM{FJ^l!,LOAMk"><field name="img">img`
-. . . . . . 6 6 7 7 7 . . . . . 
-. . . . 6 6 6 7 7 7 7 7 7 . . . 
-. . . 6 6 6 6 7 7 7 7 7 7 7 . . 
-. 6 6 6 6 6 1 7 7 7 7 7 7 7 7 7 
+. . . . . . 1 6 7 7 7 . . . . . 
+. . . . 1 1 6 7 7 7 7 7 7 . . . 
+. . . 1 6 6 6 7 7 7 7 7 7 7 . . 
+. 1 1 6 6 7 7 7 7 7 7 7 7 7 7 7 
 . . . d 1 f d d d d d 1 f d . . 
 . . d d d d d d d d d d d d d . 
 . . . d d d d d d d d d d d . . 

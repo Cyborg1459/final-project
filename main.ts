@@ -121,10 +121,10 @@ scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     `)
 let Bob = sprites.create(img`
-    . . . . . . 6 6 7 7 7 . . . . . 
-    . . . . 6 6 6 7 7 7 7 7 7 . . . 
-    . . . 6 6 6 6 7 7 7 7 7 7 7 . . 
-    . 6 6 6 6 6 1 7 7 7 7 7 7 7 7 7 
+    . . . . . . 1 6 7 7 7 . . . . . 
+    . . . . 1 1 6 7 7 7 7 7 7 . . . 
+    . . . 1 6 6 6 7 7 7 7 7 7 7 . . 
+    . 1 1 6 6 7 7 7 7 7 7 7 7 7 7 7 
     . . . d 1 f d d d d d 1 f d . . 
     . . d d d d d d d d d d d d d . 
     . . . d d d d d d d d d d d . . 
