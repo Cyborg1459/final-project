@@ -182,6 +182,36 @@ ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
 ..f777777777ff........f77f..............
 .f777777777777f......f77f...............
 f77777777777777f....f77f................
+8899989889999998888888889888888889998888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
+8888889988888888998888888888888888888888
+8998899999888899988888888888888888888888
+8899998889999998888888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888888888888999998888888888888
+8888888888888888888889988899988888888888
+8888888888888888888899888888999999998888
+8888888888888888889998888888888888888888
+8888888888888889999888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888889988888888888888888888888
+8888888888888999899988888888888888888888
+8888888888899988888899988888888888888888
+8888999999988888888888999999999988888888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
+8888888888888888888888888888888888888888
 `</field></shadow></value><value name="kind"><shadow type="spritekind" id="Ww]XSuPS|@wtT?jH@FOr"><field name="MEMBER">Enemy</field></shadow></value></block></value><next><block type="variables_set" id="eDLwf/xu+N+7y83uJyAN"><field name="VAR" id="L3}#t.JRAXQsQ}.vzx`6">Earth Monster</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="j$AxYlTS6uuX_pPZKLD3"><value name="img"><shadow type="screen_image_picker" id="{2c[;#UeJ}29-)SRKLX8"><field name="img">img`
 7 7 7 7 7 7 6 6 6 6 7 7 6 6 6 6 
 7 7 7 7 7 6 6 6 6 6 6 7 6 6 6 6 
@@ -285,7 +315,7 @@ b.b.b.bbfffbc.b.b.b.
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`</field></shadow></value><value name="kind"><shadow type="spritekind" id="SpB|BzT+O`)%K0211Q9T"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetpos" id="46XAVC,x3Fv]tO#KZgB]"><value name="sprite"><block type="variables_get" id="jTl9N%+7_;N[0rfPOccj"><field name="VAR" id="uRycrKTfWaG_Fg1fcv.E">Air Monster</field></block></value><value name="x"><shadow type="positionPicker" id="*hVynZ*=0`3AiSXKKx6l"><field name="index">21</field></shadow></value><value name="y"><shadow type="positionPicker" id="RA=ZdsEe@1o?I]T9][qO"><field name="index">40</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="variables_set" id="clnS@iCZPvsz)ZM9IJ!@" disabled="true" x="720" y="420"><field name="VAR" id="q-R!Rn|fk@l]v$hY$Cj1">Apple</field><value name="VALUE"><shadow type="math_number" id="HsWb1:dQFm-Ed+On*X~@"><field name="NUM">0</field></shadow><block type="spritescreate" id="~2d;YLGPMz_k`$EL:--w" disabled="true"><value name="img"><shadow type="screen_image_picker" id="+uSGRpooMHcW}N+?m4D_" disabled="true"><field name="img">img`
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="SpB|BzT+O`)%K0211Q9T"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="spritesetpos" id="46XAVC,x3Fv]tO#KZgB]"><value name="sprite"><block type="variables_get" id="jTl9N%+7_;N[0rfPOccj"><field name="VAR" id="uRycrKTfWaG_Fg1fcv.E">Air Monster</field></block></value><value name="x"><shadow type="positionPicker" id="*hVynZ*=0`3AiSXKKx6l"><field name="index">21</field></shadow></value><value name="y"><shadow type="positionPicker" id="RA=ZdsEe@1o?I]T9][qO"><field name="index">40</field></shadow></value><next><block type="spritesetpos" id="oX}k):SJGG4vZ+$fmu.f"><value name="sprite"><block type="variables_get" id="-PqQPvo$BTiE2;n[QsC7"><field name="VAR" id="L3}#t.JRAXQsQ}.vzx`6">Earth Monster</field></block></value><value name="x"><shadow type="positionPicker" id="bfA)afb^0xJ%:rUG)Y/z"><field name="index">118</field></shadow></value><value name="y"><shadow type="positionPicker" id="zdgT,ZsH;Z.D)@{+EaT."><field name="index">40</field></shadow></value><next><block type="spritesetpos" id="F(CL4B7DN1gJ-cSNHs?x"><value name="sprite"><block type="variables_get" id="D/2V%g[7/hkT7nPW5Gt="><field name="VAR" id="riD}|0$@(-JcRM0aoK!{">Lochness Monster</field></block></value><value name="x"><shadow type="positionPicker" id="prKR+=0g?f0:acsLTEi!"><field name="index">33</field></shadow></value><value name="y"><shadow type="positionPicker" id="%olH[Q+a}nnsXk8+jnKW"><field name="index">80</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="variables_set" id="clnS@iCZPvsz)ZM9IJ!@" disabled="true" x="720" y="420"><field name="VAR" id="q-R!Rn|fk@l]v$hY$Cj1">Apple</field><value name="VALUE"><shadow type="math_number" id="HsWb1:dQFm-Ed+On*X~@"><field name="NUM">0</field></shadow><block type="spritescreate" id="~2d;YLGPMz_k`$EL:--w" disabled="true"><value name="img"><shadow type="screen_image_picker" id="+uSGRpooMHcW}N+?m4D_" disabled="true"><field name="img">img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
