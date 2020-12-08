@@ -1,7 +1,7 @@
 scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-    fffffffffffffffffffffffffffffffffffffffffffffffffff444444444444444f4444444444444444444ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+    fffffffffffffffffffffffffffffffffffffffffffffffffff44444444444444444444444444444444444ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffff444444444444444444444222222222222222224444ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     fffffffffffffffffffffffffffffffffffffffffffff444444444444444444444444444222222222222222222444fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffff4444444444444444444444444444422222222222222222222444ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -138,7 +138,26 @@ let Bob = sprites.create(img`
     . . . . . . . 7 . 7 . . . . . . 
     . . . . . . 7 7 . 7 7 . . . . . 
     `, SpriteKind.Player)
+Bob.setFlag(SpriteFlag.StayInScreen, true)
 controller.moveSprite(Bob)
+let WiseDude = sprites.create(img`
+    . . . . . . . f . . . . . . . . 
+    . . . . . . e e f e . . . . . . 
+    . . . . . e e e e e e . . . . . 
+    . . . . . 1 1 d d d . . . . . . 
+    . . . . . . d d 1 f . . . . . . 
+    . . . . . . d d d d . . . . . . 
+    . . . . . . d d d 1 . . . . . . 
+    . . . . . . 8 8 1 1 . . . . . . 
+    . . . . . 8 8 8 8 1 1 . e e e . 
+    . . . . . 8 8 f 8 8 1 . f e . . 
+    . . . . . f f f 8 f f f f e . . 
+    . . . . . 8 8 8 8 8 8 . . e . . 
+    . . . . . f f f f f f . . e . . 
+    . . . . . 6 6 6 6 6 6 . . e . . 
+    . . . . . 6 6 . . 6 6 . . e . . 
+    . . . . 6 6 6 . . 6 6 6 . e . . 
+    `, SpriteKind.Player)
 let Lochness_Monster = sprites.create(img`
     ........................................
     ........................................
@@ -326,6 +345,7 @@ let Fire_Monster = sprites.create(img`
     ....................................
     `, SpriteKind.Player)
 Fire_Monster.startEffect(effects.fire)
+WiseDude.setPosition(78, 103)
 Air_Monster.setPosition(21, 40)
 Earth_Monster.setPosition(118, 40)
 Lochness_Monster.setPosition(33, 80)
