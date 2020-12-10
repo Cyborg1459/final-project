@@ -172,8 +172,8 @@ Bob = sprites.create(img`
     . . . . . . . 7 . 7 . . . . . . 
     . . . . . . 7 7 . 7 7 . . . . . 
     `, SpriteKind.Player)
-Bob.setFlag(SpriteFlag.StayInScreen, true)
 controller.moveSprite(Bob)
+Bob.setFlag(SpriteFlag.StayInScreen, true)
 let WiseDude = sprites.create(img`
     . . . . . . . f . . . . . . . . 
     . . . . . . e e f e . . . . . . 
