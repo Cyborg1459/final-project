@@ -22,6 +22,11 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.transparency16, function (sprite,
         `, SpriteKind.Enemy)
     Earth_Monster.setPosition(118, 40)
 })
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (Bob.isHittingTile(CollisionDirection.Bottom)) {
+        Bob.vy = -300
+    }
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.crowd4, function (sprite, location) {
     Fire_Monster = sprites.create(img`
         ....................................
@@ -597,7 +602,8 @@ Bob = sprites.create(img`
     . . . . . . 7 7 . 7 7 . . . . . 
     `, SpriteKind.Player)
 scene.cameraFollowSprite(Bob)
-controller.moveSprite(Bob)
+controller.moveSprite(Bob, 120, 0)
+Bob.ay = 700
 let WiseDude = sprites.create(img`
     . . . . . . . f . . . . . . . . 
     . . . . . . e e f e . . . . . . 
