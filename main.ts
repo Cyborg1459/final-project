@@ -339,8 +339,9 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.rock0, function (sprite, l
         7777777777777777788888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888898888888888888888888888
         `)
 })
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
-	
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    let Pizza: Sprite = null
+    Pizza.destroy()
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingOak, function (sprite, location) {
     scene.setBackgroundImage(img`
