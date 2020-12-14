@@ -1,3 +1,6 @@
+namespace SpriteKind {
+    export const Old = SpriteKind.create()
+}
 scene.onOverlapTile(SpriteKind.Player, myTiles.transparency16, function (sprite, location) {
     Earth_Monster = sprites.create(img`
         7 7 7 7 7 7 6 6 6 6 7 7 6 6 6 6 
@@ -336,6 +339,9 @@ scene.onOverlapTile(SpriteKind.Player, sprites.castle.rock0, function (sprite, l
         7777777777777777788888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888898888888888888888888888
         `)
 })
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+	
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.saplingOak, function (sprite, location) {
     scene.setBackgroundImage(img`
         9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999555555544444444444444444444444
@@ -538,5 +544,5 @@ let WiseDude = sprites.create(img`
     . . . . . 6 6 6 6 6 6 . . e . . 
     . . . . . 6 6 . . 6 6 . . e . . 
     . . . . 6 6 6 . . 6 6 6 . e . . 
-    `, SpriteKind.Player)
+    `, SpriteKind.Old)
 WiseDude.setPosition(78, 103)
