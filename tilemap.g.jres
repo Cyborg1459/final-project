@@ -144,6 +144,21 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
+    "tile29": {
+        "data": "hwQQABAAAACZmZmZmREREZmZmZkZERERmZmZERERERGZmRkREREREZmZGRERERERmZkZERERERGZGREREREREZkZERERERERmRERERERERGZEREREREREZkRERERERERGREREREREREZEREREREREREREREREREREREREREREREREREREREREQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile30": {
+        "data": "hwQQABAAAAAREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile31": {
+        "data": "hwQQABAAAAARERERERERERERERERERERGREREREREREZEREREREREZkRERERERERmRERERERERGZGREREREREZmZERERERERmZkZERERERGZmRkREREREZmZGRERERERmZkZERERERGZmZkREREREZmZmRERERERmZmZGRERERGZmZmZmREREQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
