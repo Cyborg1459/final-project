@@ -224,6 +224,11 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
+    "tile16": {
+        "data": "hwQQABAAAAB3d3d3d3d353d3bnZ3d3dmd+5+7nd3Z37udnd3fnfud3d3d3fu7n53d3d35353d3d3d+dubnd3d3d37nd37nd3fud+d3fnfnfn7nd3d3dmfnd3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d+duZu53d3d3bnd3Z+Z3d3d3d3d3Z+53dw==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
