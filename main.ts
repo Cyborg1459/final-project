@@ -303,7 +303,6 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile17, function (sprite, locatio
         ........................................
         ........................................
         `, SpriteKind.Enemy)
-    Lochness_Monster.setPosition(250, 67)
     Lochness_Monster.setVelocity(0, 75)
     projectile = sprites.createProjectileFromSprite(img`
         . . . . . . . . . . . . . . . . 
