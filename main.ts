@@ -288,6 +288,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile17, function (sprite, locatio
         ........................................
         ........................................
         `, [myTiles.transparency16,sprites.castle.tileDarkGrass3,myTiles.tile22,myTiles.tile23,myTiles.tile32,myTiles.tile33,myTiles.tile34,sprites.castle.tileDarkGrass1,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,myTiles.tile42,myTiles.tile46], TileScale.Sixteen))
+    controller.moveSprite(Bob, 117, 117)
     Lochness_Monster = sprites.create(img`
         ........................................
         ........................................
@@ -346,26 +347,6 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile17, function (sprite, locatio
     rotten_ham.destroy()
     pizza.destroy()
     Lochness_Monster.setVelocity(0, 75)
-    for (let index = 0; index < 1e+24; index++) {
-        projectile = sprites.createProjectileFromSprite(img`
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . 8 8 8 . 6 . . . . . . . . . 
-            . . 8 9 6 8 6 9 6 8 8 8 . . . . 
-            . . 8 6 6 8 9 6 6 6 8 9 8 . . . 
-            . . 8 8 8 . 6 . . . . 8 . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            . . . . . . . . . . . . . . . . 
-            `, Lochness_Monster, 50, 0)
-    }
 })
 info.onLifeZero(function () {
     game.over(false)
@@ -511,3 +492,25 @@ WiseDude.say("Greetings my dear Bob, I will be your guide on this journey to col
 tiles.placeOnRandomTile(King, myTiles.tile27)
 tiles.placeOnRandomTile(Queen, myTiles.tile28)
 tiles.placeOnRandomTile(WiseDude, myTiles.tile45)
+game.onUpdate(function () {
+    if (Math.percentChance(50)) {
+        projectile = sprites.createProjectileFromSprite(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . 8 8 8 . 6 . . . . . . . . . 
+            . . 8 9 6 8 6 9 6 8 8 8 . . . . 
+            . . 8 6 6 8 9 6 6 6 8 9 8 . . . 
+            . . 8 8 8 . 6 . . . . 8 . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, Lochness_Monster, -50, 0)
+    }
+})
