@@ -70,6 +70,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         Bob.vy = -300
     }
 })
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
+    game.over(false)
+})
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location) {
     game.showLongText("Get to the end of the maze, without getting caught by the maze monster", DialogLayout.Bottom)
     info.startCountdown(2)
