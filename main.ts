@@ -493,7 +493,7 @@ tiles.placeOnRandomTile(King, myTiles.tile27)
 tiles.placeOnRandomTile(Queen, myTiles.tile28)
 tiles.placeOnRandomTile(WiseDude, myTiles.tile45)
 game.onUpdate(function () {
-    if (Math.percentChance(50)) {
+    if (Math.percentChance(10)) {
         projectile = sprites.createProjectileFromSprite(img`
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
@@ -511,6 +511,6 @@ game.onUpdate(function () {
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
-            `, Lochness_Monster, -50, 0)
+            `, Lochness_Monster, -50, -50)
     }
 })
