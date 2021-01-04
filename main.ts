@@ -346,6 +346,26 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile17, function (sprite, locatio
     rotten_ham.destroy()
     pizza.destroy()
     Lochness_Monster.setVelocity(0, 75)
+    for (let index = 0; index < 1e+24; index++) {
+        projectile = sprites.createProjectileFromSprite(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . 8 8 8 . 6 . . . . . . . . . 
+            . . 8 9 6 8 6 9 6 8 8 8 . . . . 
+            . . 8 6 6 8 9 6 6 6 8 9 8 . . . 
+            . . 8 8 8 . 6 . . . . 8 . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, Lochness_Monster, 50, 0)
+    }
 })
 info.onLifeZero(function () {
     game.over(false)
@@ -491,23 +511,3 @@ WiseDude.say("Greetings my dear Bob, I will be your guide on this journey to col
 tiles.placeOnRandomTile(King, myTiles.tile27)
 tiles.placeOnRandomTile(Queen, myTiles.tile28)
 tiles.placeOnRandomTile(WiseDude, myTiles.tile45)
-forever(function () {
-    projectile = sprites.createProjectileFromSprite(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . 8 8 8 . 6 . . . . . . . . . 
-        . . 8 9 6 8 6 9 6 8 8 8 . . . . 
-        . . 8 6 6 8 9 6 6 6 8 9 8 . . . 
-        . . 8 8 8 . 6 . . . . 8 . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, Lochness_Monster, 50, 0)
-})
