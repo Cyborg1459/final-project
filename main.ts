@@ -2,6 +2,7 @@ namespace SpriteKind {
     export const Old = SpriteKind.create()
     export const badfood = SpriteKind.create()
     export const non = SpriteKind.create()
+    export const enmy = SpriteKind.create()
 }
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     sword = sprites.createProjectileFromSprite(img`
@@ -90,9 +91,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Bob.isHittingTile(CollisionDirection.Bottom)) {
         Bob.vy = -300
     }
-})
-sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Player, function (sprite, otherSprite) {
-    game.over(false)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location) {
     game.showLongText("Get to the end of the maze, without getting caught by the maze monster. You have also been given a sword that you could use against some monsters, but for the Maze monster, the sword is useless. ", DialogLayout.Bottom)
@@ -358,12 +356,15 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile64, function (sprite, locatio
             ..................ffff777
             .....................fff7
             .......................f7
-            `, SpriteKind.Enemy)
+            `, SpriteKind.enmy)
         tiles.placeOnRandomTile(Lochness_Monster, myTiles.tile67)
     }
     Lochness_Monster.setVelocity(60, 30)
     game.showLongText("Swim across the water without getting drowned by the lochness monster", DialogLayout.Bottom)
     Lochness_Monster.setFlag(SpriteFlag.BounceOnWall, true)
+})
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    Earth_Monster.destroy()
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
