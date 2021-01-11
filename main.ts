@@ -359,7 +359,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile64, function (sprite, locatio
             `, SpriteKind.enmy)
         tiles.placeOnRandomTile(Lochness_Monster, myTiles.tile67)
     }
-    Lochness_Monster.setVelocity(60, 30)
+    Lochness_Monster.setVelocity(120, 60)
     game.showLongText("Swim across the water without getting drowned by the lochness monster", DialogLayout.Bottom)
     Lochness_Monster.setFlag(SpriteFlag.BounceOnWall, true)
 })
