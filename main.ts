@@ -375,13 +375,55 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile64, function (sprite, locatio
         .....................fff7
         .......................f7
         `, SpriteKind.enmy)
+    lochness_monster_3 = sprites.create(img`
+        .........................
+        .....ffffffff............
+        ....ff777c77fff..........
+        ...ff777cf7777f..........
+        ...f7777777777ff.........
+        ...ff7777777777f.........
+        ....ffff7777777fff.......
+        .......fff7777777fff.....
+        .........fff7777777f.....
+        ...........fffff7777ff...
+        ...............f77777ff..
+        ...............ff77777ff.
+        ................fff77777f
+        ..................ffff777
+        .....................fff7
+        .......................f7
+        `, SpriteKind.enmy)
+    lochness_monster_4 = sprites.create(img`
+        .........................
+        .....ffffffff............
+        ....ff777c77fff..........
+        ...ff777cf7777f..........
+        ...f7777777777ff.........
+        ...ff7777777777f.........
+        ....ffff7777777fff.......
+        .......fff7777777fff.....
+        .........fff7777777f.....
+        ...........fffff7777ff...
+        ...............f77777ff..
+        ...............ff77777ff.
+        ................fff77777f
+        ..................ffff777
+        .....................fff7
+        .......................f7
+        `, SpriteKind.enmy)
     Lochness_Monster.setPosition(128, 24)
     Lochness_monstar2.setPosition(137, 37)
-    Lochness_Monster.setVelocity(120, 60)
-    Lochness_monstar2.setVelocity(120, 60)
+    lochness_monster_3.setPosition(150, 37)
+    lochness_monster_4.setPosition(128, 75)
+    Lochness_Monster.setVelocity(130, 80)
+    Lochness_monstar2.setVelocity(110, 70)
+    lochness_monster_3.setVelocity(60, 100)
+    lochness_monster_4.setVelocity(150, 50)
     game.showLongText("Swim across the water without getting drowned by the lochness monster", DialogLayout.Bottom)
     Lochness_Monster.setFlag(SpriteFlag.BounceOnWall, true)
     Lochness_monstar2.setFlag(SpriteFlag.BounceOnWall, true)
+    lochness_monster_3.setFlag(SpriteFlag.BounceOnWall, true)
+    lochness_monster_4.setFlag(SpriteFlag.BounceOnWall, true)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     Earth_Monster.destroy()
@@ -389,6 +431,8 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, oth
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
 })
+let lochness_monster_4: Sprite = null
+let lochness_monster_3: Sprite = null
 let Earth_Monster: Sprite = null
 let Maze_Monster: Sprite = null
 let pizza: Sprite = null
