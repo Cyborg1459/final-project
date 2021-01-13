@@ -660,3 +660,6 @@ WiseDude.say("Greetings my dear Bob, I will be your guide on this journey to col
 tiles.placeOnRandomTile(King, myTiles.tile27)
 tiles.placeOnRandomTile(Queen, myTiles.tile28)
 tiles.placeOnRandomTile(WiseDude, myTiles.tile45)
+for (let index = 0; index < 1; index++) {
+    music.playMelody("G B A G F B A B ", 120)
+}
