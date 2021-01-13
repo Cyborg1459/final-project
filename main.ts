@@ -548,6 +548,9 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile64, function (sprite, locatio
     Lochness_monstar2.setFlag(SpriteFlag.BounceOnWall, true)
     lochness_monster_3.setFlag(SpriteFlag.BounceOnWall, true)
     lochness_monster_4.setFlag(SpriteFlag.BounceOnWall, true)
+    for (let index = 0; index < 6; index++) {
+        music.playMelody("E B C5 A B G A F ", 200)
+    }
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
     Earth_Monster.destroy()
