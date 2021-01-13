@@ -243,6 +243,9 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location
     tiles.placeOnRandomTile(pizza, myTiles.tile43)
     tiles.placeOnRandomTile(rotten_ham, myTiles.tile44)
     tiles.placeOnRandomTile(WiseDude, myTiles.tile18)
+    for (let index = 0; index < 2; index++) {
+        music.playMelody("B G A F A B G C5 ", 120)
+    }
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.crowd4, function (sprite, location) {
     Earth_Monster = sprites.create(img`
