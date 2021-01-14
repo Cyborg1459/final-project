@@ -33,6 +33,24 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile63, function (sprite, locatio
         2..............2
         2222222222222222
         `, [myTiles.transparency16,sprites.dungeon.greenOuterWest2,sprites.dungeon.greenSwitchUp,sprites.dungeon.greenSwitchDown], TileScale.Sixteen))
+    fireball = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . 2 2 2 2 2 2 2 . . . . . 
+        . . . . 2 2 4 4 4 2 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 2 4 4 4 2 2 . . . . . 
+        . . . . 2 2 2 2 2 2 2 . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.enmy, function (sprite, otherSprite) {
     otherSprite.destroy()
@@ -119,12 +137,12 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile42, function (sprite, locatio
         .........bc.........
         .........b..........
         .........c..........
-        `, SpriteKind.enmy)
+        `, SpriteKind.Ennmy)
     Air_Monster.setVelocity(71, 5)
     Air_Monster.setFlag(SpriteFlag.BounceOnWall, true)
     tiles.placeOnRandomTile(Air_Monster, myTiles.tile62)
     tiles.placeOnRandomTile(Bob, myTiles.tile71)
-    for (let index = 0; index < 3; index++) {
+    for (let index = 0; index < 4; index++) {
         music.playMelody("C5 G B G C5 A B A ", 120)
     }
 })
@@ -617,6 +635,7 @@ let Lochness_monstar2: Sprite = null
 let Lochness_Monster: Sprite = null
 let rotten_ham: Sprite = null
 let sword: Sprite = null
+let fireball: Sprite = null
 let WiseDude: Sprite = null
 let Queen: Sprite = null
 let Bob: Sprite = null
@@ -744,6 +763,3 @@ WiseDude.say("Greetings my dear Bob, I will be your guide on this journey to col
 tiles.placeOnRandomTile(King, myTiles.tile27)
 tiles.placeOnRandomTile(Queen, myTiles.tile28)
 tiles.placeOnRandomTile(WiseDude, myTiles.tile45)
-for (let index = 0; index < 1; index++) {
-    music.playMelody("G B A G F B A B ", 120)
-}
