@@ -280,25 +280,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile8, function (sprite, location
     }
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.builtin.crowd4, function (sprite, location) {
-    Earth_Monster = sprites.create(img`
-        7 7 7 7 7 7 6 6 6 6 7 7 6 6 6 6 
-        7 7 7 7 7 6 6 6 6 6 6 7 6 6 6 6 
-        7 7 7 7 6 6 6 6 7 7 7 7 7 7 6 6 
-        7 7 7 7 7 7 6 6 7 7 7 7 7 6 7 7 
-        7 7 7 7 6 6 6 7 7 6 6 7 7 7 7 7 
-        7 6 6 7 6 6 6 7 7 6 6 6 7 7 7 7 
-        6 6 6 6 6 6 7 7 7 6 6 6 7 7 7 7 
-        7 6 7 7 7 7 7 7 6 6 6 6 6 7 6 6 
-        7 6 7 7 7 7 7 7 7 7 7 7 7 7 6 6 
-        7 6 7 6 6 7 7 7 7 7 7 7 7 7 6 7 
-        6 6 6 6 7 7 6 7 7 6 6 6 6 6 6 7 
-        6 6 6 7 7 6 6 6 6 7 6 6 6 6 7 7 
-        7 6 6 6 6 6 6 6 6 6 7 6 6 6 6 7 
-        7 7 7 6 6 7 6 7 7 7 6 6 6 6 7 7 
-        7 7 7 7 7 7 6 6 7 7 6 6 6 7 7 7 
-        7 7 7 7 7 7 7 6 6 7 7 6 6 7 7 7 
-        `, SpriteKind.Enemy)
-    Earth_Monster.setPosition(118, 40)
+	
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.enmy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
@@ -556,12 +538,12 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile64, function (sprite, locatio
     }
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
+    let Earth_Monster: Sprite = null
     Earth_Monster.destroy()
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
 })
-let Earth_Monster: Sprite = null
 let Maze_Monster: Sprite = null
 let pizza: Sprite = null
 let Air_Monster: Sprite = null
