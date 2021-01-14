@@ -394,6 +394,11 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
+    "tile79": {
+        "data": "hwQQABAAAAC7u7u7zLy7u7u7u7u7y7u7u7u7u8y8vLu7u7u77s/Lu7u7u7vu/ry8u7u7u07+vLy7u7u77v68vLu7u7vu/ry8u7u7u+7+vLy7u7u77vS8vLu7u7vu/ry8u7u7u+T+vLy7u7u77s/Lu7u7u7vMvLy7u7u7u7vLu7u7u7u7zLy7uw==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
     "level": {
         "id": "level",
         "mimeType": "application/mkcd-tilemap",
