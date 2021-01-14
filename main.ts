@@ -119,12 +119,12 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile42, function (sprite, locatio
         .........bc.........
         .........b..........
         .........c..........
-        `, SpriteKind.Ennmy)
+        `, SpriteKind.enmy)
     Air_Monster.setVelocity(71, 5)
     Air_Monster.setFlag(SpriteFlag.BounceOnWall, true)
     tiles.placeOnRandomTile(Air_Monster, myTiles.tile62)
     tiles.placeOnRandomTile(Bob, myTiles.tile71)
-    for (let index = 0; index < 4; index++) {
+    for (let index = 0; index < 3; index++) {
         music.playMelody("C5 G B G C5 A B A ", 120)
     }
 })
