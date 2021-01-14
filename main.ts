@@ -95,6 +95,9 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile42, function (sprite, locatio
     Air_Monster.setFlag(SpriteFlag.BounceOnWall, true)
     tiles.placeOnRandomTile(Air_Monster, myTiles.tile62)
     tiles.placeOnRandomTile(Bob, myTiles.tile71)
+    for (let index = 0; index < 4; index++) {
+        music.playMelody("C5 G B G C5 A B A ", 120)
+    }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Bob.isHittingTile(CollisionDirection.Bottom)) {
