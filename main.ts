@@ -9,7 +9,7 @@ namespace SpriteKind {
 }
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile63, function (sprite, location) {
     tiles.setTilemap(tiles.createTilemap(hex`1000190001020002000200020002000200020002060404040404040404040404040404070105040404040404040404040404050101040805040504040504040408040401010404040404040404040405040404010604040404040408040404040404050701040405040408040404040404040401010804040404040404080408040404010104040404040404040404040404050101040404050404040404040405040401010405040404040404040404040404010104040404080404040504040404040106040504040404050404040504040407010404040404040408040408040404010104040404050404040404040404040101040404040404040405040404040401010404040404040804040404050404010604040404040404050404040404050701040405080804040404040404080401010404040404040404040404040404010104040404040404040404040408040106040808040405040404040804040407010805040404040404040405040405010104040404040404090404040405040106030303030303030303030303030307`, img`
-        .............2.2
+        22.2.2.2.2.2.2.2
         2..............2
         2..............2
         2..............2
@@ -81,6 +81,14 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile63, function (sprite, locatio
         ......44.........44......
         .........................
         `, SpriteKind.ememy)
+    Air_Monster.destroy()
+    WIND.destroy()
+    Wind2.destroy()
+    Wind3.destroy()
+    Wind4.destroy()
+    Wind5.destroy()
+    Wind6.destroy()
+    Wind7.destroy()
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.enmy, function (sprite, otherSprite) {
     otherSprite.destroy()
@@ -169,13 +177,11 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile42, function (sprite, locatio
         .........b..........
         .........c..........
         `, SpriteKind.Ennmy)
+    Air_Monster.follow(Bob, 80)
     Air_Monster.setVelocity(71, 5)
     Air_Monster.setFlag(SpriteFlag.BounceOnWall, true)
     tiles.placeOnRandomTile(Air_Monster, myTiles.tile62)
     tiles.placeOnRandomTile(Bob, myTiles.tile71)
-    for (let index = 0; index < 4; index++) {
-        music.playMelody("C5 G B G C5 A B A ", 120)
-    }
     WIND = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -327,6 +333,13 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile42, function (sprite, locatio
     Wind5.setPosition(104, 10)
     Wind6.setPosition(128, 10)
     Wind7.setPosition(144, 10)
+    WIND.setFlag(SpriteFlag.BounceOnWall, true)
+    Wind2.setFlag(SpriteFlag.BounceOnWall, true)
+    Wind3.setFlag(SpriteFlag.BounceOnWall, true)
+    Wind4.setFlag(SpriteFlag.BounceOnWall, true)
+    Wind5.setFlag(SpriteFlag.BounceOnWall, true)
+    Wind6.setFlag(SpriteFlag.BounceOnWall, true)
+    Wind7.setFlag(SpriteFlag.BounceOnWall, true)
     WIND.setVelocity(34, 69)
     Wind2.setVelocity(21, 81)
     Wind3.setVelocity(73, 15)
@@ -740,38 +753,6 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile64, function (sprite, locatio
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
-    tiles.placeOnRandomTile(Maze_Monster, myTiles.tile16)
-    info.changeLifeBy(-1)
-    info.startCountdown(2)
-    Maze_Monster.destroy()
-    tiles.placeOnRandomTile(Bob, myTiles.tile18)
-    tiles.setTilemap(tiles.createTilemap(hex`1900190001010101010101010101060606010606060606060606060606010606060606060606060607060106060606060606060606060106060606060605060606060601060606010101010101060601060601010101010101010101010606060606060606010606010606010106060106060606060106060606060606060106060606060101060601060606060601060601010101010101060606060601010606010606010101010606060606060606010606060606010106060606060606060106060606060606060106060606060101060606060606060601060606060606060601060606060601010606060606010606010101010101060606010606060606060606060606060106060606060606010106060106060606060606060606060601060606060606060101060601060606060606010101010101010606010101060601010606010606060606060106060606060606060101010606010106060106060606060601060606060606060601010106060101060601060606060606010606010101010606010106060601010606010606010606060106060106060606060106060606060606060106060106060601060601060606060601060306060606060601060601060606010606010606060606010606060606010101010606010606060106060106060101010101010106060106060606060106060606060601060606060606060601060601060606060601060606060606010606060606060602010606010606010606010606010606060101010101010101010101010106060106060106060106060606060606060606060601060606060601060601060401060606060606060606060606010606060606010606`, img`
-        2222222222...2...........
-        2............2...........
-        2............2...222222..
-        2..22222222222........2..
-        2..22..2.....2........2..
-        ...22..2.....2..2222222..
-        ...22..2..2222........2..
-        ...22........2........2..
-        ...22........2........2..
-        ...22.....2..222222...2..
-        ..........2.......22..2..
-        ..........2.......22..2..
-        ....2222222..222..22..2..
-        ....2........222..22..2..
-        ....2........222..22..2..
-        ....2..2222..22...22..2..
-        2...2..2.....2........2..
-        2...2..2.....2........2..
-        2...2..2.....2.....2222..
-        2...2..2..2222222..2.....
-        2......2........2..2.....
-        2......2........2..2..2..
-        2..2...2222222222222..2..
-        2..2............2.....2..
-        2..2............2.....2..
-        `, [myTiles.transparency16,sprites.dungeon.floorLight0,myTiles.tile17,myTiles.tile43,myTiles.tile44,myTiles.tile18,sprites.castle.tilePath5,myTiles.tile16], TileScale.Sixteen))
     Maze_Monster = sprites.create(img`
         .....dd.......d.....d.........
         ....e.dd.eee.d.....d.ee.......
@@ -804,10 +785,48 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
         ......ee666e...e666de.........
         ......6d6666...666666.........
         `, SpriteKind.Enemy)
+    tiles.placeOnRandomTile(Maze_Monster, myTiles.tile16)
     game.showLongText("You lost a life, try to get to the end of the maze without getting caught by the Maze monster.", DialogLayout.Bottom)
+    info.changeLifeBy(-1)
+    info.startCountdown(2)
+    Maze_Monster.destroy()
+    tiles.placeOnRandomTile(Bob, myTiles.tile18)
+    tiles.setTilemap(tiles.createTilemap(hex`1900190001010101010101010101060606010606060606060606060606010606060606060606060607060106060606060606060606060106060606060605060606060601060606010101010101060601060601010101010101010101010606060606060606010606010606010106060106060606060106060606060606060106060606060101060601060606060601060601010101010101060606060601010606010606010101010606060606060606010606060606010106060606060606060106060606060606060106060606060101060606060606060601060606060606060601060606060601010606060606010606010101010101060606010606060606060606060606060106060606060606010106060106060606060606060606060601060606060606060101060601060606060606010101010101010606010101060601010606010606060606060106060606060606060101010606010106060106060606060601060606060606060601010106060101060601060606060606010606010101010606010106060601010606010606010606060106060106060606060106060606060606060106060106060601060601060606060601060306060606060601060601060606010606010606060606010606060606010101010606010606060106060106060101010101010106060106060606060106060606060601060606060606060601060601060606060601060606060606010606060606060602010606010606010606010606010606060101010101010101010101010106060106060106060106060606060606060606060601060606060601060601060401060606060606060606060606010606060606010606`, img`
+        2222222222...2...........
+        2............2...........
+        2............2...222222..
+        2..22222222222........2..
+        2..22..2.....2........2..
+        ...22..2.....2..2222222..
+        ...22..2..2222........2..
+        ...22........2........2..
+        ...22........2........2..
+        ...22.....2..222222...2..
+        ..........2.......22..2..
+        ..........2.......22..2..
+        ....2222222..222..22..2..
+        ....2........222..22..2..
+        ....2........222..22..2..
+        ....2..2222..22...22..2..
+        2...2..2.....2........2..
+        2...2..2.....2........2..
+        2...2..2.....2.....2222..
+        2...2..2..2222222..2.....
+        2......2........2..2.....
+        2......2........2..2..2..
+        2..2...2222222222222..2..
+        2..2............2.....2..
+        2..2............2.....2..
+        `, [myTiles.transparency16,sprites.dungeon.floorLight0,myTiles.tile17,myTiles.tile43,myTiles.tile44,myTiles.tile18,sprites.castle.tilePath5,myTiles.tile16], TileScale.Sixteen))
 })
 let Maze_Monster: Sprite = null
 let pizza: Sprite = null
+let lochness_monster_4: Sprite = null
+let lochness_monster_3: Sprite = null
+let Lochness_monstar2: Sprite = null
+let Lochness_Monster: Sprite = null
+let rotten_ham: Sprite = null
+let sword: Sprite = null
 let Wind7: Sprite = null
 let Wind6: Sprite = null
 let Wind5: Sprite = null
@@ -816,12 +835,6 @@ let Wind3: Sprite = null
 let Wind2: Sprite = null
 let WIND: Sprite = null
 let Air_Monster: Sprite = null
-let lochness_monster_4: Sprite = null
-let lochness_monster_3: Sprite = null
-let Lochness_monstar2: Sprite = null
-let Lochness_Monster: Sprite = null
-let rotten_ham: Sprite = null
-let sword: Sprite = null
 let Fire_Monster: Sprite = null
 let fireball: Sprite = null
 let WiseDude: Sprite = null
@@ -951,6 +964,3 @@ WiseDude.say("Greetings my dear Bob, I will be your guide on this journey to col
 tiles.placeOnRandomTile(King, myTiles.tile27)
 tiles.placeOnRandomTile(Queen, myTiles.tile28)
 tiles.placeOnRandomTile(WiseDude, myTiles.tile45)
-game.onUpdate(function () {
-	
-})
