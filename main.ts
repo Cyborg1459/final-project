@@ -296,7 +296,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile81, function (sprite, locatio
         2222222222222222222222222
         `, [myTiles.transparency16,myTiles.tile74,myTiles.tile101,myTiles.tile102,myTiles.tile103], TileScale.Sixteen))
     game.showLongText("Destroy the Fire Monster with the water gun. Click the space bar to fire water. Then go to the exit.", DialogLayout.Bottom)
-    Bob.ay = 100
+    controller.moveSprite(Bob, 70, 0)
     Water_Gun.destroy()
     fireball.destroy()
     fireball_2.destroy()
