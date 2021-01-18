@@ -230,6 +230,10 @@ namespace myTiles {
     export const tile113 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile114 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile115 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile116 = image.ofBuffer(hex``);
 
     helpers.registerTilemapFactory(function(name: string) {
         switch(helpers.stringTrim(name)) {

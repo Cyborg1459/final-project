@@ -9,10 +9,12 @@ namespace SpriteKind {
     export const Gun = SpriteKind.create()
     export const f00d = SpriteKind.create()
     export const AAA = SpriteKind.create()
+    export const Object = SpriteKind.create()
+    export const FM = SpriteKind.create()
 }
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile63, function (sprite, location) {
     game.showLongText("Get to the other side, and exit through the right gate. All of the gates are fake except one of them. Good luck", DialogLayout.Bottom)
-    tiles.setTilemap(tiles.createTilemap(hex`10001900010c090d0a0e090f091109120910090b050303030303030303030303030303060104030303030303030303030303040101030704030403030403030307030301010303030303030303030304030303010503030303030307030303030303040601030304030307030303030303030301010703030303030303070307030303010103030303030303030303030303040101030303040303030303030304030301010304030303030303030303030303010103030303070303030403030303030105030403030303040303030403030306010303030303030307030307030303010103030303040303030303030303030101030303030303030304030303030301010303030303030703030303040303010503030303030303040303030303040601030304070703030303030303070301010303030303030303030303030303010103030303030303030303030307030105030707030304030303030703030306010704030303030303030304030304010103030303030303080303030304030105020202020202020202020202020206`, img`
+    tiles.setTilemap(tiles.createTilemap(hex`10001900010c090d0a0e090f091109120910090b050303030303030303030303030303060104030303030303030303030303040101030704030403130403030307030301010303030303030303030304030303010503030303030307030303030303040601030304030307030303030303030301010703030303030303070307030303010103030303030303030303030303040101030303040303030303030304030301010304030303030303030303030303010103030303070303030403030303030105030403030303040303030403030306010303030303030307030307030303010103030303040303030303030303030101030303030303030304030303030301010303030303030703030303040303010503030303030303040303030303040601030304070703030303030303070301010303030303030303030303030303010103030303030303030303030307030105030707030304030303030703030306010704030303030303030304030304010103030303030303080303030304030105020202020202020202020202020206`, img`
         22.2.2.2.2.2.2.2
         2..............2
         2..............2
@@ -38,7 +40,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile63, function (sprite, locatio
         2..............2
         2..............2
         2222222222222222
-        `, [myTiles.transparency16,sprites.dungeon.greenOuterWest2,sprites.dungeon.greenSwitchDown,myTiles.tile74,myTiles.tile75,myTiles.tile76,myTiles.tile77,myTiles.tile78,myTiles.tile79,myTiles.tile80,myTiles.tile81,sprites.dungeon.greenOuterEast2,myTiles.tile105,myTiles.tile106,myTiles.tile107,myTiles.tile108,myTiles.tile111,myTiles.tile109,myTiles.tile110], TileScale.Sixteen))
+        `, [myTiles.transparency16,sprites.dungeon.greenOuterWest2,sprites.dungeon.greenSwitchDown,myTiles.tile74,myTiles.tile75,myTiles.tile76,myTiles.tile77,myTiles.tile78,myTiles.tile79,myTiles.tile80,myTiles.tile81,sprites.dungeon.greenOuterEast2,myTiles.tile105,myTiles.tile106,myTiles.tile107,myTiles.tile108,myTiles.tile111,myTiles.tile109,myTiles.tile110,myTiles.tile115], TileScale.Sixteen))
     Air_Monster.destroy()
     WIND.destroy()
     Wind2.destroy()
@@ -48,146 +50,6 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile63, function (sprite, locatio
     Wind6.destroy()
     Wind7.destroy()
     tiles.placeOnRandomTile(Bob, myTiles.tile79)
-    fireball = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball_2 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball_3 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball_4 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball_5 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball_6 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball_7 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball.setVelocity(0, 70)
-    fireball_2.setVelocity(0, 70)
-    fireball_3.setVelocity(0, 70)
-    fireball_4.setVelocity(0, 70)
-    fireball_5.setVelocity(0, 70)
-    fireball_6.setVelocity(0, 70)
-    fireball_7.setVelocity(0, 70)
-    tiles.placeOnRandomTile(fireball, myTiles.tile105)
-    tiles.placeOnRandomTile(fireball_2, myTiles.tile106)
-    tiles.placeOnRandomTile(fireball_3, myTiles.tile107)
-    tiles.placeOnRandomTile(fireball_4, myTiles.tile108)
-    tiles.placeOnRandomTile(fireball_5, myTiles.tile109)
-    tiles.placeOnRandomTile(fireball_6, myTiles.tile110)
-    tiles.placeOnRandomTile(fireball_7, myTiles.tile111)
     Water_Gun = sprites.create(img`
         ..............................
         ..............................
@@ -206,6 +68,155 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile63, function (sprite, locatio
         .9222.........................
         ..99..........................
         `, SpriteKind.Gun)
+    tiles.placeOnRandomTile(Water_Gun, myTiles.tile115)
+    fireball = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.ebeby)
+    fireball_2 = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.ebeby)
+    fireball_3 = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.ebeby)
+    fireball_4 = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.ebeby)
+    fireball_5 = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.ebeby)
+    fireball_6 = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.ebeby)
+    fireball_7 = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . 2 4 4 4 4 4 2 . . . . . 
+        . . . . . 2 4 4 4 2 . . . . . . 
+        . . . . . . 2 2 2 . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.ebeby)
+    fireball.setVelocity(0, 76)
+    fireball_2.setVelocity(0, 76)
+    fireball_3.setVelocity(0, 76)
+    fireball_4.setVelocity(0, 76)
+    fireball_5.setVelocity(0, 76)
+    fireball_6.setVelocity(0, 76)
+    fireball_7.setVelocity(0, 76)
+    tiles.placeOnRandomTile(fireball, myTiles.tile105)
+    tiles.placeOnRandomTile(fireball_2, myTiles.tile106)
+    tiles.placeOnRandomTile(fireball_3, myTiles.tile107)
+    tiles.placeOnRandomTile(fireball_4, myTiles.tile108)
+    tiles.placeOnRandomTile(fireball_5, myTiles.tile109)
+    tiles.placeOnRandomTile(fireball_6, myTiles.tile110)
+    tiles.placeOnRandomTile(fireball_7, myTiles.tile111)
+    fireball.setFlag(SpriteFlag.BounceOnWall, true)
+    fireball_2.setFlag(SpriteFlag.BounceOnWall, true)
+    fireball_3.setFlag(SpriteFlag.BounceOnWall, true)
+    fireball_4.setFlag(SpriteFlag.BounceOnWall, true)
+    fireball_5.setFlag(SpriteFlag.BounceOnWall, true)
+    fireball_6.setFlag(SpriteFlag.BounceOnWall, true)
+    fireball_7.setFlag(SpriteFlag.BounceOnWall, true)
+    fireball_7.setFlag(SpriteFlag.BounceOnWall, true)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.enmy, function (sprite, otherSprite) {
     otherSprite.destroy()
@@ -245,146 +256,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.ebeby, function (sprite, otherSp
         2..............2
         2222222222222222
         `, [myTiles.transparency16,sprites.dungeon.greenOuterWest2,sprites.dungeon.greenSwitchDown,myTiles.tile74,myTiles.tile75,myTiles.tile76,myTiles.tile77,myTiles.tile78,myTiles.tile79,myTiles.tile80,myTiles.tile81,sprites.dungeon.greenOuterEast2,myTiles.tile105,myTiles.tile106,myTiles.tile107,myTiles.tile108,myTiles.tile111,myTiles.tile109,myTiles.tile110], TileScale.Sixteen))
-    fireball = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball_2 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball_3 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball_4 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball_5 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball_6 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball_7 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 4 4 4 4 4 2 . . . . . 
-        . . . . 2 2 4 4 4 2 2 . . . . . 
-        . . . . 2 2 2 2 2 2 2 . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.ebeby)
-    fireball.setVelocity(0, 70)
-    fireball_2.setVelocity(0, 70)
-    fireball_3.setVelocity(0, 70)
-    fireball_4.setVelocity(0, 70)
-    fireball_5.setVelocity(0, 70)
-    fireball_6.setVelocity(0, 70)
-    fireball_7.setVelocity(0, 70)
-    tiles.placeOnRandomTile(fireball, myTiles.tile105)
-    tiles.placeOnRandomTile(fireball_2, myTiles.tile106)
-    tiles.placeOnRandomTile(fireball_3, myTiles.tile107)
-    tiles.placeOnRandomTile(fireball_4, myTiles.tile108)
-    tiles.placeOnRandomTile(fireball_5, myTiles.tile109)
-    tiles.placeOnRandomTile(fireball_6, myTiles.tile110)
-    tiles.placeOnRandomTile(fireball_7, myTiles.tile111)
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     sword = sprites.createProjectileFromSprite(img`
@@ -425,7 +296,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile81, function (sprite, locatio
         2222222222222222222222222
         `, [myTiles.transparency16,myTiles.tile74,myTiles.tile101,myTiles.tile102,myTiles.tile103], TileScale.Sixteen))
     game.showLongText("Destroy the Fire Monster with the water gun. Click the space bar to fire water. Then go to the exit.", DialogLayout.Bottom)
-    Bob.ay = 40
+    Bob.ay = 100
     Water_Gun.destroy()
     fireball.destroy()
     fireball_2.destroy()
@@ -478,13 +349,14 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile81, function (sprite, locatio
         .....4554.......4554.....
         ......44.........44......
         .........................
-        `, SpriteKind.AAA)
+        `, SpriteKind.FM)
     tiles.placeOnRandomTile(Bob, myTiles.tile103)
     tiles.placeOnRandomTile(Fire_Monster, myTiles.tile102)
     tiles.placeOnRandomTile(fer_ball, myTiles.tile102)
     fer_ball.setVelocity(-57, 0)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Gun, function (sprite, otherSprite) {
+    Water_Gun.destroy()
     game.showLongText("You collected the Water Gun. To defeat the Fire Monster, use this weapon.", DialogLayout.Bottom)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.badfood, function (sprite, otherSprite) {
@@ -894,6 +766,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.f00d, function (sprite, otherSpr
     Good_fuud.destroy()
     info.changeLifeBy(1)
 })
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.FM, function (sprite, otherSprite) {
+    otherSprite.destroy()
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.enmy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
     tiles.placeOnRandomTile(Bob, myTiles.tile69)
@@ -1109,6 +984,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.AAA, function (sprite, otherSpri
     fer_ball.setVelocity(-57, 0)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile102, function (sprite, location) {
+    fer_ball.destroy()
     tiles.setTilemap(tiles.createTilemap(hex`46000f0006060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060606060600000000050000000500000000000500000005000005000000000000050000000500000005000000000500000000000005000000000000000005000000000005000000050000000000000500000005000000000005000000050000050000000000000500000005000000050000000005000000000000050000000000000000050000000000050000000500000000000005000000050000000000050000000500000500000000000005000000070000000500000000050000000000000500000000000000000700000000000500000005000000000000050000000700000000000500000005000007000000000000050000000500000005000000000700000000000005000000000000000005000000000005000000050000130000000500000005000000000005000000050000050000000000000500000005000000050000000005000000000000050000000000000000050000000000050000000700000101010101010801010901010a0101010101010b01010c01010d01010101010101010e01010101010101010f0101010101010101100101010101011101010101011201010101020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020303040303030303030304030303030303030303030403030303030303030304030303030303030304030303030303030303030304030303030303030303030303040303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303030303`, img`
         ......................................................................
         ......................................................................
@@ -1491,17 +1367,17 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile102, function (sprite, locati
         tiles.placeOnRandomTile(Earth_Monster_9, myTiles.tile97)
         tiles.placeOnRandomTile(Earth_Monster_10, myTiles.tile98)
         tiles.placeOnRandomTile(Earth_Monster_11, myTiles.tile99)
-        Earth_Monster.setVelocity(0, 70)
-        Earth_Monster_2.setVelocity(0, 70)
-        Earth_Monster_3.setVelocity(0, 70)
-        Earth_Monster_4.setVelocity(0, 70)
-        Earth_Monster_5.setVelocity(0, 70)
-        Earth_Monster_6.setVelocity(0, 70)
-        Earth_Monster_7.setVelocity(0, 70)
-        Earth_Monster_8.setVelocity(0, 70)
-        Earth_Monster_9.setVelocity(0, 70)
-        Earth_Monster_10.setVelocity(0, 70)
-        Earth_Monster_11.setVelocity(0, 70)
+        Earth_Monster.setVelocity(0, -70)
+        Earth_Monster_2.setVelocity(0, -70)
+        Earth_Monster_3.setVelocity(0, -70)
+        Earth_Monster_4.setVelocity(0, -70)
+        Earth_Monster_5.setVelocity(0, -70)
+        Earth_Monster_6.setVelocity(0, -70)
+        Earth_Monster_7.setVelocity(0, -70)
+        Earth_Monster_8.setVelocity(0, -70)
+        Earth_Monster_9.setVelocity(0, -70)
+        Earth_Monster_10.setVelocity(0, -70)
+        Earth_Monster_11.setVelocity(0, -70)
     }
 })
 info.onLifeZero(function () {
@@ -1511,6 +1387,10 @@ info.onLifeZero(function () {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     pizza.destroy()
     info.changeLifeBy(1)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Object, function (sprite, otherSprite) {
+    sword.destroy()
+    game.showLongText("You collected a sword!", DialogLayout.Bottom)
 })
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile64, function (sprite, location) {
     tiles.setTilemap(tiles.createTilemap(hex`2d000a00030303030303030303030303030303030303030303030303030303030303030303030303030303030303030405030303030303030303030303030303030303030303030303030303030303030303030303030303030303040505030101010103030303030303030303030303030303030303030303030303030303030303030303030304050505030303030303030303030303030303030303030303030303030303030303030303030303030303030304050505030303030303030303030301010101010101010101030303030303030303030303030303030303030304050505070303030303030303030303030303030303030303030303030303030303030303030303030303030306020508030303030303030303030303030303030303030303030303030303030303030303030303030303030304050505030303030303030101010101010303030303030301010101010101010101030303030303030303030304050505030303030303030303030303030303030303030303030303030303030303030303030303030303030303040505030303030303030303030303030303030303030303030303030303030303030303030303030303030303030405`, img`
@@ -1625,7 +1505,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile64, function (sprite, locatio
     Lochness_monstar2.setVelocity(110, 70)
     lochness_monster_3.setVelocity(60, 100)
     lochness_monster_4.setVelocity(150, 50)
-    game.showLongText("Swim across the water without getting drowned by the lochness monster. You can throw your sword to slay them. Click the spacebar to fire sword.", DialogLayout.Bottom)
+    game.showLongText("Swim across the water without getting drowned by the lochness monster. You can throw your sword to slay them. Click \"e\" on your keyboard to fire sword.", DialogLayout.Bottom)
     Lochness_Monster.setFlag(SpriteFlag.BounceOnWall, true)
     Lochness_monstar2.setFlag(SpriteFlag.BounceOnWall, true)
     lochness_monster_3.setFlag(SpriteFlag.BounceOnWall, true)
@@ -1635,44 +1515,6 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile64, function (sprite, locatio
     }
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
-    Maze_Monster = sprites.create(img`
-        .....dd.......d.....d.........
-        ....e.dd.eee.d.....d.ee.......
-        ....eeedeeeedd.eeedebee.......
-        .....eebeeeebeeeeeeebe........
-        .....eeebeeebeeeeebbee........
-        ......eebeeebeeeebebe.........
-        ......ebeeeebeeebeeeb.........
-        .....ebe1ffeebeb1ffeee........
-        ....efe1ffffeee1ffffefe.......
-        ....efeff1ffeeeff1ffefe.......
-        ....efefffffeeefffffefe.......
-        .....eeefffeeeeefffeee........
-        ......eeeeeeeeeeeeeee.........
-        ......eeeeeeeeeeeeeee.........
-        ......efeeeeeeeeeeefe.........
-        .....eeffeeeeeeeeeffe.........
-        .....eef1ffeeeeeff1fe.........
-        .....eef111fffff111fe.........
-        ....eeefc1cc1cc111cfeee.......
-        .eeeeeeeffc111cc1ffeeeeeee....
-        e..ee.eeeeff11cffeeee.ee..e...
-        ..e.e.eeeeeefffeeeeee.e.e.....
-        ..e...eeeeeeeeeeeeeee...e.....
-        ......eeeeeeeeeeeeeee.........
-        ......eeeeeeeeeeeeeee.........
-        ......eeeeeeeeeeeeeee.........
-        ......eeeeee...eeeeee.........
-        ......eeeeee...eeeeed.........
-        ......ee666e...e666de.........
-        ......6d6666...666666.........
-        `, SpriteKind.Enemy)
-    tiles.placeOnRandomTile(Maze_Monster, myTiles.tile16)
-    game.showLongText("You lost a life, try to get to the end of the maze without getting caught by the Maze monster.", DialogLayout.Bottom)
-    info.changeLifeBy(-1)
-    info.startCountdown(2)
-    Maze_Monster.destroy()
-    tiles.placeOnRandomTile(Bob, myTiles.tile18)
     tiles.setTilemap(tiles.createTilemap(hex`1900190001010101010101010101060606010606060606060606060606010606060606060606060607060106060606060606060606060106060606060605060606060601060606010101010101060601060601010101010101010101010606060606060606010606010606010106060106060606060106060606060606060106060606060101060601060606060601060601010101010101060606060601010606010606010101010606060606060606010606060606010106060606060606060106060606060606060106060606060101060606060606060601060606060606060601060606060601010606060606010606010101010101060606010606060606060606060606060106060606060606010106060106060606060606060606060601060606060606060101060601060606060606010101010101010606010101060601010606010606060606060106060606060606060101010606010106060106060606060601060606060606060601010106060101060601060606060606010606010101010606010106060601010606010606010606060106060106060606060106060606060606060106060106060601060601060606060601060306060606060601060601060606010606010606060606010606060606010101010606010606060106060106060101010101010106060106060606060106060606060601060606060606060601060601060606060601060606060606010606060606060602010606010606010606010606010606060101010101010101010101010106060106060106060106060606060606060606060601060606060601060601060401060606060606060606060606010606060606010606`, img`
         2222222222...2...........
         2............2...........
@@ -1700,6 +1542,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
         2..2............2.....2..
         2..2............2.....2..
         `, [myTiles.transparency16,sprites.dungeon.floorLight0,myTiles.tile17,myTiles.tile43,myTiles.tile44,myTiles.tile18,sprites.castle.tilePath5,myTiles.tile16], TileScale.Sixteen))
+    info.changeLifeBy(-1)
+    game.showLongText("You lost a life, try to get to the end of the maze without getting caught by the Maze monster.", DialogLayout.Bottom)
+    info.startCountdown(2)
+    tiles.placeOnRandomTile(Bob, myTiles.tile18)
+    tiles.placeOnRandomTile(Maze_Monster, myTiles.tile16)
 })
 let Earth_Monster_11: Sprite = null
 let Earth_Monster_10: Sprite = null
@@ -1722,8 +1569,6 @@ let Lochness_Monster: Sprite = null
 let rotten_ham: Sprite = null
 let Fire_Monster: Sprite = null
 let fer_ball: Sprite = null
-let sword: Sprite = null
-let Water_Gun: Sprite = null
 let fireball_7: Sprite = null
 let fireball_6: Sprite = null
 let fireball_5: Sprite = null
@@ -1731,6 +1576,7 @@ let fireball_4: Sprite = null
 let fireball_3: Sprite = null
 let fireball_2: Sprite = null
 let fireball: Sprite = null
+let Water_Gun: Sprite = null
 let Wind7: Sprite = null
 let Wind6: Sprite = null
 let Wind5: Sprite = null
@@ -1739,11 +1585,12 @@ let Wind3: Sprite = null
 let Wind2: Sprite = null
 let WIND: Sprite = null
 let Air_Monster: Sprite = null
+let sword: Sprite = null
 let WiseDude: Sprite = null
 let Queen: Sprite = null
 let Bob: Sprite = null
 let King: Sprite = null
-tiles.setTilemap(tiles.createTilemap(hex`32000a000404040404030303030303030303030303030303030303030303030303030303030303030303030303030303030f03030e0903030705080303030303030303141516030303030303030303030303030303030303030314151603030303030e11100e110d030303050303031415160303030303030303030303030303030314151603030303030303030303030303030e09091109090d0303030503030303030303141516030303030303141516030303030303030303031415151603030303030303030d030e11090303030503030303030303030303030303030303030303030303030303030303030303030303030303030303030d0e09110d0303030503030303030303030303030303030303030303030303030303030303030303030303030303030303030d030d030d13120b0a0c030303030303030303030303030303030303030303030303030303030303030303030303030303030d030d030d0404040404030303030303030303030303030303030303030303030303030303030303030303030303030317060d030d030d01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202`, img`
+tiles.setTilemap(tiles.createTilemap(hex`32000a000404040404030303030303030303030303030303030303030303030303030303030303030303030303030303030f03030e0903030705080303030303030303141516030303030303030303030303030303030303030314151603030303030e11100e110d030303050303031415160303030303030303030303030303030314151603030303030303030303030303030e09091109090d0303030503030303030303141516030303030303141516030303030303030303031415151603030303030303030d030e11090303030503030303030303030303030303030303030303030303030303030303030303030303030303030303030d0e09110d0303030503030303030303030303030303030303030303030303030303030303030303030303030303030303030d030d030d13120b0a0c030303030303030303030303030303030303030303030303030303030303030303030303030303030d030d030d0404040404030303030303030303030303030303030303030303030303030303030303030303030303180317060d030d030d01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202`, img`
     22222.............................................
     ..................................................
     ..................................................
@@ -1754,7 +1601,7 @@ tiles.setTilemap(tiles.createTilemap(hex`32000a000404040404030303030303030303030
     22222........................................2.2.2
     22222222222222222222222222222222222222222222222222
     22222222222222222222222222222222222222222222222222
-    `, [myTiles.transparency16,myTiles.tile1,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile7,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile45], TileScale.Sixteen))
+    `, [myTiles.transparency16,myTiles.tile1,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile7,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile45,myTiles.tile116], TileScale.Sixteen))
 King = sprites.create(img`
     ....................
     ....4....4....4.....
@@ -1867,3 +1714,36 @@ WiseDude.say("Greetings my dear Bob, I will be your guide on this journey to col
 tiles.placeOnRandomTile(King, myTiles.tile27)
 tiles.placeOnRandomTile(Queen, myTiles.tile28)
 tiles.placeOnRandomTile(WiseDude, myTiles.tile45)
+sword = sprites.create(img`
+    ................
+    ................
+    ................
+    ................
+    ................
+    ................
+    ................
+    ................
+    ................
+    ................
+    ................
+    ................
+    .......1........
+    .......d1.......
+    .......db.......
+    .......db.......
+    .......db.......
+    .......db.......
+    .......db.......
+    .......db.......
+    .......db.......
+    .......db.......
+    ......5db.......
+    .......5b.......
+    .......f5.......
+    .......ef5......
+    .......fe.......
+    .......ef.......
+    .......fe.......
+    ........f.......
+    `, SpriteKind.Object)
+tiles.placeOnRandomTile(sword, myTiles.tile116)
