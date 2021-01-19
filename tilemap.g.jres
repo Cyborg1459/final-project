@@ -694,6 +694,16 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
+    "tile139": {
+        "data": "hwQQABAAAAALAAAAAAAAsAsAAAAAAACwCwAAAAAAALALAAAAAAAAsAsAAAAAAACwCwAAAAAAALALAAAAAAAAsAsAAAAAAACwCwAAAAAAALALAAAAAAAAsAsAAAAAAACwCwAAAAAAALALAAAAAAAAsAsAAAAAAACwCwAAAAAAALALAAAAAAAAsA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
+    "tile140": {
+        "data": "hwQQABAAAACZmZmZmZmZmZmZmZmZmZmZmZmZiYiImZmZmYkYERGYmZmJGBEREYGZmRgRgYiIEZiZGIEYEYEYmIkRgREYERiBiREYgRiBEYGJEYGIERERmJkYEREREYGZmRgRERGBmJmZiYiIiJiZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true
+    },
     "level": {
         "id": "level",
         "mimeType": "application/mkcd-tilemap",
