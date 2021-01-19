@@ -3175,7 +3175,7 @@ WiseDude = sprites.create(img`
     . . . . 6 6 6 . . 6 6 6 . e . . 
     `, SpriteKind.Old)
 WiseDude.setPosition(78, 103)
-info.setLife(3)
+info.setLife(5)
 game.showLongText("Bob is sent by his king and queen to go find and bring back the magical blob which will Bob's homeland \"Lardland\"", DialogLayout.Bottom)
 game.showLongText("use \"<\" and \">\" to move right and left. use \"^\" to jump", DialogLayout.Bottom)
 Queen.say("Godspeed Bob!")
