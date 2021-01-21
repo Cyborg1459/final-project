@@ -1090,6 +1090,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile42, function (sprite, locatio
         ....................................
         222222222222222222222222222222222222
         `, [myTiles.transparency16,sprites.castle.tileDarkGrass3,myTiles.tile4,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,sprites.castle.tilePath5,myTiles.tile71], TileScale.Sixteen))
+    tiles.placeOnRandomTile(Bob, myTiles.tile71)
     Air_Monster = sprites.create(img`
         ......bbbbbbb.......
         .....bbbbbbbbb......
@@ -1116,7 +1117,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile42, function (sprite, locatio
     Air_Monster.setFlag(SpriteFlag.BounceOnWall, true)
     Air_Monster.follow(Bob, 80)
     tiles.placeOnRandomTile(Air_Monster, myTiles.tile62)
-    tiles.placeOnRandomTile(Bob, myTiles.tile71)
+    game.showLongText("There is an air montser throwing huge gusts of wind at you. Dogde them and get to the Castle", DialogLayout.Bottom)
     WIND_2 = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -1226,27 +1227,23 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile42, function (sprite, locatio
         . . . . . . 1 1 1 1 1 1 f . . . 
         `, SpriteKind.Ennmy)
     WIND_2.setPosition(7, 10)
-    Wind2.setPosition(32, 10)
     Wind3.setPosition(49, 10)
     Wind4.setPosition(78, 10)
     Wind5.setPosition(104, 10)
     Wind6.setPosition(128, 10)
     Wind7.setPosition(144, 10)
-    WIND_2.setFlag(SpriteFlag.BounceOnWall, true)
-    Wind2.setFlag(SpriteFlag.BounceOnWall, true)
-    Wind3.setFlag(SpriteFlag.BounceOnWall, true)
-    Wind4.setFlag(SpriteFlag.BounceOnWall, true)
-    Wind5.setFlag(SpriteFlag.BounceOnWall, true)
-    Wind6.setFlag(SpriteFlag.BounceOnWall, true)
-    Wind7.setFlag(SpriteFlag.BounceOnWall, true)
     WIND_2.setVelocity(90, 81)
-    Wind2.setVelocity(42, 81)
     Wind3.setVelocity(100, 15)
     Wind4.setVelocity(100, 32)
     Wind5.setVelocity(60, -65)
     Wind6.setVelocity(79, 53)
     Wind7.setVelocity(50, 94)
-    WiseDude.say("There is an air montser throwing huge gusts of wind at you. Dogde them and get to the Castle")
+    WIND_2.setFlag(SpriteFlag.BounceOnWall, true)
+    Wind3.setFlag(SpriteFlag.BounceOnWall, true)
+    Wind4.setFlag(SpriteFlag.BounceOnWall, true)
+    Wind5.setFlag(SpriteFlag.BounceOnWall, true)
+    Wind6.setFlag(SpriteFlag.BounceOnWall, true)
+    Wind7.setFlag(SpriteFlag.BounceOnWall, true)
     Lochness_Monster.destroy()
     Lochness_monstar2.destroy()
     lochness_monster_3.destroy()
@@ -2753,13 +2750,13 @@ let Queen: Sprite = null
 let Bob: Sprite = null
 let King: Sprite = null
 tiles.setTilemap(tiles.createTilemap(hex`32000a000404040404030303030303030303030303030303030303030303030303030303030303030303030303030303030f03030e0903030705080303030303030303141516030303030303030303030303030303030303030314151603030303030e11100e110d030303050303031415160303030303030303030303030303030314151603030303030303030303030303030e09091109090d0303030503030303030303141516030303030303141516030303030303030303031415151603030303030303030d030e11090303030503030303030303030303030303030303030303030303030303030303030303030303030303030303030d0e09110d0303030503030303030303030303030303030303030303030303030303030303030303030303030303030303030d030d030d13120b0a0c030303030303030303030303030303030303030303030303030303030303030303030303030303030d030d030d0404040404030303030303030303030303030303030303030303030303030303030303030303030303180317060d030d030d01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202`, img`
-    22222.............................................
-    ..................................................
-    ..................................................
-    .............................................2....
-    .............................................2...2
-    .............................................2.2.2
-    .............................................2.2.2
+    22222....................................2........
+    .........................................2........
+    .........................................2........
+    .........................................2...2....
+    .........................................2...2...2
+    .........................................2...2.2.2
+    .........................................2...2.2.2
     22222........................................2.2.2
     22222222222222222222222222222222222222222222222222
     22222222222222222222222222222222222222222222222222
