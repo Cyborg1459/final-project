@@ -47,7 +47,7 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile63, function (sprite, locatio
         2..............2
         2..............2
         2222222222222222
-        `, [myTiles.transparency16,sprites.dungeon.greenOuterWest2,sprites.dungeon.greenSwitchDown,myTiles.tile74,myTiles.tile75,myTiles.tile76,myTiles.tile77,myTiles.tile78,myTiles.tile79,myTiles.tile80,myTiles.tile81,sprites.dungeon.greenOuterEast2,myTiles.tile105,myTiles.tile106,myTiles.tile107,myTiles.tile108,myTiles.tile111,myTiles.tile109,myTiles.tile110,myTiles.tile115,myTiles.tile1,myTiles.tile2,myTiles.tile3,myTiles.tile4,myTiles.tile5,myTiles.tile6,myTiles.tile7,myTiles.tile8,myTiles.tile9,myTiles.tile10,myTiles.tile11,myTiles.tile12,myTiles.tile13,myTiles.tile14,myTiles.tile15,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile23,myTiles.tile24,myTiles.tile25,myTiles.tile26,myTiles.tile27,myTiles.tile28,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile32,myTiles.tile33,myTiles.tile34,myTiles.tile35,myTiles.tile36,myTiles.tile37,myTiles.tile38,myTiles.tile39,myTiles.tile40,myTiles.tile41,myTiles.tile42,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile16,myTiles.tile46,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile58,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,myTiles.tile64,myTiles.tile65,myTiles.tile66,myTiles.tile67,myTiles.tile68,myTiles.tile69,myTiles.tile71,myTiles.tile70,myTiles.tile72,myTiles.tile73,myTiles.tile82,myTiles.tile83,myTiles.tile84,myTiles.tile85,myTiles.tile86,myTiles.tile87,myTiles.tile88,myTiles.tile89,myTiles.tile90,myTiles.tile91,myTiles.tile92,myTiles.tile93,myTiles.tile94,myTiles.tile95,myTiles.tile96,myTiles.tile97,myTiles.tile98,myTiles.tile99,myTiles.tile100,myTiles.tile101,myTiles.tile102,myTiles.tile103,myTiles.tile104,myTiles.tile112,myTiles.tile113,myTiles.tile114,myTiles.tile116,myTiles.tile117,myTiles.tile118,myTiles.tile119,myTiles.tile120,myTiles.tile121,myTiles.tile122,myTiles.tile123,myTiles.tile124], TileScale.Sixteen))
+        `, [myTiles.transparency16,sprites.dungeon.greenOuterWest2,sprites.dungeon.greenSwitchDown,myTiles.tile74,myTiles.tile75,myTiles.tile76,myTiles.tile77,myTiles.tile78,myTiles.tile79,myTiles.tile80,myTiles.tile81,sprites.dungeon.greenOuterEast2,myTiles.tile105,myTiles.tile106,myTiles.tile107,myTiles.tile108,myTiles.tile111,myTiles.tile109,myTiles.tile110,myTiles.tile115], TileScale.Sixteen))
     Air_Monster.destroy()
     WIND_2.destroy()
     Wind2.destroy()
@@ -1144,24 +1144,6 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile42, function (sprite, locatio
         . . . . . 1 1 . . . . . 1 1 . . 
         . . . . . . 1 1 1 1 1 1 f . . . 
         `, SpriteKind.Ennmy)
-    Wind2 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . 1 1 1 1 1 f . . . . . 
-        . . . 1 1 . . . . . 1 1 1 . . . 
-        . . 1 1 . . . . . . . . 1 . . . 
-        . . 1 . . . . 1 1 1 . . . . . . 
-        . f 1 . . . 1 . . . 1 f 1 . . . 
-        . 1 . . . 1 1 . . . . . 1 1 . . 
-        . 1 . . . 1 . . . . . . . 1 1 . 
-        . 1 . . . 1 . . . 1 1 . . . 1 . 
-        . 1 1 . . 1 . . . . 1 . . . 1 . 
-        . . 1 . . f 1 . . . 1 . . . 1 . 
-        . . 1 1 . . . 1 1 1 1 . . . f . 
-        . . . . 1 . . . . 1 . . . 1 1 . 
-        . . . . . 1 1 . . . . . 1 1 . . 
-        . . . . . . 1 1 1 1 1 1 f . . . 
-        `, SpriteKind.Ennmy)
     Wind3 = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -1217,24 +1199,6 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile42, function (sprite, locatio
         . . . . . . 1 1 1 1 1 1 f . . . 
         `, SpriteKind.Ennmy)
     Wind6 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . 1 1 1 1 1 f . . . . . 
-        . . . 1 1 . . . . . 1 1 1 . . . 
-        . . 1 1 . . . . . . . . 1 . . . 
-        . . 1 . . . . 1 1 1 . . . . . . 
-        . f 1 . . . 1 . . . 1 f 1 . . . 
-        . 1 . . . 1 1 . . . . . 1 1 . . 
-        . 1 . . . 1 . . . . . . . 1 1 . 
-        . 1 . . . 1 . . . 1 1 . . . 1 . 
-        . 1 1 . . 1 . . . . 1 . . . 1 . 
-        . . 1 . . f 1 . . . 1 . . . 1 . 
-        . . 1 1 . . . 1 1 1 1 . . . f . 
-        . . . . 1 . . . . 1 . . . 1 1 . 
-        . . . . . 1 1 . . . . . 1 1 . . 
-        . . . . . . 1 1 1 1 1 1 f . . . 
-        `, SpriteKind.Ennmy)
-    Wind7 = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . 1 1 1 1 1 f . . . . . 
@@ -1637,6 +1601,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Boat, function (sprite, otherSpr
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.enmy, function (sprite, otherSprite) {
     info.changeLifeBy(-1)
+    game.showLongText("You lost a life, swim across the water without getting drowned by the Lochness Monster.", DialogLayout.Bottom)
     tiles.placeOnRandomTile(Bob, myTiles.tile69)
     tiles.setTilemap(tiles.createTilemap(hex`2d000a00030303030303030303030303030303030303030303030303030303030303030303030303030303030303030405030303030303030303030303030303030303030303030303030303030303030303030303030303030303040505030101010103030303030303030303030303030303030303030303030303030303030303030303030304050505030303030303030303030303030303030303030303030303030303030303030303030303030303030304050505030303030303030303030301010101010101010101030303030303030303030303030303030303030304050505070303030303030303030303030303030303030303030303030303030303030303030303030303030306020505030303030303030303030303030303030303030303030303030303030303030303030303030303030304050505030303030303030101010101010303030303030301010101010101010101030303030303030303030304050505030303030303030303030303030303030303030303030303030303030303030303030303030303030303040505030303030303030303030303030303030303030303030303030303030303030303030303030303030303030405`, img`
         .............................................
@@ -1650,78 +1615,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.enmy, function (sprite, otherSpr
         .............................................
         .............................................
         `, [myTiles.transparency16,myTiles.tile32,myTiles.tile42,myTiles.tile4,myTiles.tile65,myTiles.tile66,myTiles.tile67,myTiles.tile69], TileScale.Sixteen))
-    Lochness_Monster = sprites.create(img`
-        .........................
-        .....ffffffff............
-        ....ff777c71fff..........
-        ...ff777cf7711f..........
-        ...f6777777771ff.........
-        ...ff6666777771f.........
-        ....ffff6667777fff.......
-        .......fff6677777fff.....
-        .........ff66667777f.....
-        ...........fff666777ff...
-        ...............f66777ff..
-        ...............ff66677ff.
-        ................fff66777f
-        ..................ff66777
-        ...................ff6666
-        ....................ff666
-        `, SpriteKind.enmy)
-    Lochness_monstar2 = sprites.create(img`
-        .........................
-        .....ffffffff............
-        ....ff777c71fff..........
-        ...ff777cf7711f..........
-        ...f6777777771ff.........
-        ...ff6666777771f.........
-        ....ffff6667777fff.......
-        .......fff6677777fff.....
-        .........ff66667777f.....
-        ...........fff666777ff...
-        ...............f66777ff..
-        ...............ff66677ff.
-        ................fff66777f
-        ..................ff66777
-        ...................ff6666
-        ....................ff666
-        `, SpriteKind.enmy)
-    lochness_monster_3 = sprites.create(img`
-        .........................
-        .....ffffffff............
-        ....ff777c71fff..........
-        ...ff777cf7711f..........
-        ...f6777777771ff.........
-        ...ff6666777771f.........
-        ....ffff6667777fff.......
-        .......fff6677777fff.....
-        .........ff66667777f.....
-        ...........fff666777ff...
-        ...............f66777ff..
-        ...............ff66677ff.
-        ................fff66777f
-        ..................ff66777
-        ...................ff6666
-        ....................ff666
-        `, SpriteKind.enmy)
-    lochness_monster_4 = sprites.create(img`
-        .........................
-        .....ffffffff............
-        ....ff777c71fff..........
-        ...ff777cf7711f..........
-        ...f6777777771ff.........
-        ...ff6666777771f.........
-        ....ffff6667777fff.......
-        .......fff6677777fff.....
-        .........ff66667777f.....
-        ...........fff666777ff...
-        ...............f66777ff..
-        ...............ff66677ff.
-        ................fff66777f
-        ..................ff66777
-        ...................ff6666
-        ....................ff666
-        `, SpriteKind.enmy)
     Lochness_Monster.setPosition(128, 24)
     Lochness_monstar2.setPosition(137, 37)
     lochness_monster_3.setPosition(150, 37)
@@ -1730,7 +1623,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.enmy, function (sprite, otherSpr
     Lochness_monstar2.setVelocity(110, 70)
     lochness_monster_3.setVelocity(60, 100)
     lochness_monster_4.setVelocity(150, 50)
-    game.showLongText("You lost a life, swim across the water without getting drowned by the Lochness Monster.", DialogLayout.Bottom)
     Lochness_Monster.setFlag(SpriteFlag.BounceOnWall, true)
     Lochness_monstar2.setFlag(SpriteFlag.BounceOnWall, true)
     lochness_monster_3.setFlag(SpriteFlag.BounceOnWall, true)
@@ -1739,14 +1631,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.enmy, function (sprite, otherSpr
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Ennmy, function (sprite, otherSprite) {
     WiseDude.say("You have lost one life. Dodge them to get to the castle.")
     info.changeLifeBy(-1)
-    WIND_2.destroy()
-    Wind2.destroy()
-    Wind3.destroy()
-    Wind4.destroy()
-    Wind5.destroy()
-    Wind6.destroy()
-    Wind7.destroy()
-    Air_Monster.destroy()
     tiles.setTilemap(tiles.createTilemap(hex`24001e000202020202020202020202020202020202020202020202020202020202020202020202020202030405020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020202020304050202020202020202020202020202020202020202020202020202020202020202140202020202020202020202020202020202020202020202020202020202020202020213131313020202020202020202020202020202020202020202020203040502060202131313131313131302020202020202020202020202020202020202020202020202061313131313131313131313020202020304050202020202020202020202020202020202060213131313131313131313130202020202020202020202020202020202020202020202060206021313131313131313020202020202020202020202020202020202020202020202060606020202131313060202020202020202020202020202020202020202020202020202020b060206060202020602020b02020202020202020202020202020202020202020202020b0b0b06060602020202060b0b0b0602020202020202020202020304040502020202020b0b0b0b0b0606020202060b0b0b0b0b0202020202020202020202020202020206060202020908070606060606060602091507020202020203040502020202020202020206060606060908070e0e0e0e0e0e0e0e090807020202020202020202020202020206060606060602060908070b0a0c0c0c0c0f0b090807020202020202020202020202020206060606060606060908070b0d06020606100b090807060606060202020202020202020202020202020202060908070b0d12121212100b090807020202060202020202020202020202020202020202020908070b0d11111111100b090807020202020202020202020202020202020202020202020908070b0d11111111100b0908070202020202020202020202010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010116161616161601010101010101010101010101010101010101010101161616161616161616161616161616161616160101010101010101010101010101161616161616161616161616161616161616161616161616161616161616161601161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161617161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616`, img`
         ....................................
         ....................................
@@ -1779,198 +1663,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Ennmy, function (sprite, otherSp
         ....................................
         222222222222222222222222222222222222
         `, [myTiles.transparency16,sprites.castle.tileDarkGrass3,myTiles.tile4,myTiles.tile29,myTiles.tile30,myTiles.tile31,myTiles.tile47,myTiles.tile48,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile55,myTiles.tile56,myTiles.tile57,myTiles.tile59,myTiles.tile60,myTiles.tile61,myTiles.tile62,myTiles.tile63,sprites.castle.tilePath5,myTiles.tile71], TileScale.Sixteen))
-    Air_Monster = sprites.create(img`
-        ......bbbbbbb.......
-        .....bbbbbbbbb......
-        ....bcbbbbbbbcb.....
-        ...bcccbbbbbcccb....
-        ..bccaccbbbccaccb...
-        ..bbcccbbbbbcccbb...
-        ..bbbcbbbbbbbcbbb...
-        ..bfbbbbbbbbbcffb...
-        ..bfffbbbbbbbfcfb...
-        ..bfccfbbbbffccfb...
-        ..bbfccffffcccfbb...
-        ...bfcccccccccfc....
-        ....bfcccccccfc.....
-        .bbb.bffcccffc.bbb..
-        b.b.b.bbfffbc.b.b.b.
-        .......bbbbc........
-        ........bbc.........
-        .........bc.........
-        .........b..........
-        .........c..........
-        `, SpriteKind.Ennmy)
-    Air_Monster.follow(Bob, 60)
-    Air_Monster.setVelocity(71, 5)
-    Air_Monster.setFlag(SpriteFlag.BounceOnWall, true)
-    tiles.placeOnRandomTile(Air_Monster, myTiles.tile62)
     tiles.placeOnRandomTile(Bob, myTiles.tile71)
-    WIND_2 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . 1 1 1 1 1 f . . . . . 
-        . . . 1 1 . . . . . 1 1 1 . . . 
-        . . 1 1 . . . . . . . . 1 . . . 
-        . . 1 . . . . 1 1 1 . . . . . . 
-        . f 1 . . . 1 . . . 1 f 1 . . . 
-        . 1 . . . 1 1 . . . . . 1 1 . . 
-        . 1 . . . 1 . . . . . . . 1 1 . 
-        . 1 . . . 1 . . . 1 1 . . . 1 . 
-        . 1 1 . . 1 . . . . 1 . . . 1 . 
-        . . 1 . . f 1 . . . 1 . . . 1 . 
-        . . 1 1 . . . 1 1 1 1 . . . f . 
-        . . . . 1 . . . . 1 . . . 1 1 . 
-        . . . . . 1 1 . . . . . 1 1 . . 
-        . . . . . . 1 1 1 1 1 1 f . . . 
-        `, SpriteKind.Ennmy)
-    Wind2 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . 1 1 1 1 1 f . . . . . 
-        . . . 1 1 . . . . . 1 1 1 . . . 
-        . . 1 1 . . . . . . . . 1 . . . 
-        . . 1 . . . . 1 1 1 . . . . . . 
-        . f 1 . . . 1 . . . 1 f 1 . . . 
-        . 1 . . . 1 1 . . . . . 1 1 . . 
-        . 1 . . . 1 . . . . . . . 1 1 . 
-        . 1 . . . 1 . . . 1 1 . . . 1 . 
-        . 1 1 . . 1 . . . . 1 . . . 1 . 
-        . . 1 . . f 1 . . . 1 . . . 1 . 
-        . . 1 1 . . . 1 1 1 1 . . . f . 
-        . . . . 1 . . . . 1 . . . 1 1 . 
-        . . . . . 1 1 . . . . . 1 1 . . 
-        . . . . . . 1 1 1 1 1 1 f . . . 
-        `, SpriteKind.Ennmy)
-    Wind3 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . 1 1 1 1 1 f . . . . . 
-        . . . 1 1 . . . . . 1 1 1 . . . 
-        . . 1 1 . . . . . . . . 1 . . . 
-        . . 1 . . . . 1 1 1 . . . . . . 
-        . f 1 . . . 1 . . . 1 f 1 . . . 
-        . 1 . . . 1 1 . . . . . 1 1 . . 
-        . 1 . . . 1 . . . . . . . 1 1 . 
-        . 1 . . . 1 . . . 1 1 . . . 1 . 
-        . 1 1 . . 1 . . . . 1 . . . 1 . 
-        . . 1 . . f 1 . . . 1 . . . 1 . 
-        . . 1 1 . . . 1 1 1 1 . . . f . 
-        . . . . 1 . . . . 1 . . . 1 1 . 
-        . . . . . 1 1 . . . . . 1 1 . . 
-        . . . . . . 1 1 1 1 1 1 f . . . 
-        `, SpriteKind.Ennmy)
-    Wind4 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . 1 1 1 1 1 f . . . . . 
-        . . . 1 1 . . . . . 1 1 1 . . . 
-        . . 1 1 . . . . . . . . 1 . . . 
-        . . 1 . . . . 1 1 1 . . . . . . 
-        . f 1 . . . 1 . . . 1 f 1 . . . 
-        . 1 . . . 1 1 . . . . . 1 1 . . 
-        . 1 . . . 1 . . . . . . . 1 1 . 
-        . 1 . . . 1 . . . 1 1 . . . 1 . 
-        . 1 1 . . 1 . . . . 1 . . . 1 . 
-        . . 1 . . f 1 . . . 1 . . . 1 . 
-        . . 1 1 . . . 1 1 1 1 . . . f . 
-        . . . . 1 . . . . 1 . . . 1 1 . 
-        . . . . . 1 1 . . . . . 1 1 . . 
-        . . . . . . 1 1 1 1 1 1 f . . . 
-        `, SpriteKind.Ennmy)
-    Wind5 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . 1 1 1 1 1 f . . . . . 
-        . . . 1 1 . . . . . 1 1 1 . . . 
-        . . 1 1 . . . . . . . . 1 . . . 
-        . . 1 . . . . 1 1 1 . . . . . . 
-        . f 1 . . . 1 . . . 1 f 1 . . . 
-        . 1 . . . 1 1 . . . . . 1 1 . . 
-        . 1 . . . 1 . . . . . . . 1 1 . 
-        . 1 . . . 1 . . . 1 1 . . . 1 . 
-        . 1 1 . . 1 . . . . 1 . . . 1 . 
-        . . 1 . . f 1 . . . 1 . . . 1 . 
-        . . 1 1 . . . 1 1 1 1 . . . f . 
-        . . . . 1 . . . . 1 . . . 1 1 . 
-        . . . . . 1 1 . . . . . 1 1 . . 
-        . . . . . . 1 1 1 1 1 1 f . . . 
-        `, SpriteKind.Ennmy)
-    Wind6 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . 1 1 1 1 1 f . . . . . 
-        . . . 1 1 . . . . . 1 1 1 . . . 
-        . . 1 1 . . . . . . . . 1 . . . 
-        . . 1 . . . . 1 1 1 . . . . . . 
-        . f 1 . . . 1 . . . 1 f 1 . . . 
-        . 1 . . . 1 1 . . . . . 1 1 . . 
-        . 1 . . . 1 . . . . . . . 1 1 . 
-        . 1 . . . 1 . . . 1 1 . . . 1 . 
-        . 1 1 . . 1 . . . . 1 . . . 1 . 
-        . . 1 . . f 1 . . . 1 . . . 1 . 
-        . . 1 1 . . . 1 1 1 1 . . . f . 
-        . . . . 1 . . . . 1 . . . 1 1 . 
-        . . . . . 1 1 . . . . . 1 1 . . 
-        . . . . . . 1 1 1 1 1 1 f . . . 
-        `, SpriteKind.Ennmy)
-    Wind7 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . 1 1 1 1 1 f . . . . . 
-        . . . 1 1 . . . . . 1 1 1 . . . 
-        . . 1 1 . . . . . . . . 1 . . . 
-        . . 1 . . . . 1 1 1 . . . . . . 
-        . f 1 . . . 1 . . . 1 f 1 . . . 
-        . 1 . . . 1 1 . . . . . 1 1 . . 
-        . 1 . . . 1 . . . . . . . 1 1 . 
-        . 1 . . . 1 . . . 1 1 . . . 1 . 
-        . 1 1 . . 1 . . . . 1 . . . 1 . 
-        . . 1 . . f 1 . . . 1 . . . 1 . 
-        . . 1 1 . . . 1 1 1 1 . . . f . 
-        . . . . 1 . . . . 1 . . . 1 1 . 
-        . . . . . 1 1 . . . . . 1 1 . . 
-        . . . . . . 1 1 1 1 1 1 f . . . 
-        `, SpriteKind.Ennmy)
-    Wind7 = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . 1 1 1 1 1 f . . . . . 
-        . . . 1 1 . . . . . 1 1 1 . . . 
-        . . 1 1 . . . . . . . . 1 . . . 
-        . . 1 . . . . 1 1 1 . . . . . . 
-        . f 1 . . . 1 . . . 1 f 1 . . . 
-        . 1 . . . 1 1 . . . . . 1 1 . . 
-        . 1 . . . 1 . . . . . . . 1 1 . 
-        . 1 . . . 1 . . . 1 1 . . . 1 . 
-        . 1 1 . . 1 . . . . 1 . . . 1 . 
-        . . 1 . . f 1 . . . 1 . . . 1 . 
-        . . 1 1 . . . 1 1 1 1 . . . f . 
-        . . . . 1 . . . . 1 . . . 1 1 . 
-        . . . . . 1 1 . . . . . 1 1 . . 
-        . . . . . . 1 1 1 1 1 1 f . . . 
-        `, SpriteKind.Ennmy)
-    WIND_2.setPosition(7, 10)
-    Wind2.setPosition(32, 10)
-    Wind3.setPosition(49, 10)
-    Wind4.setPosition(78, 10)
-    Wind5.setPosition(104, 10)
-    Wind6.setPosition(128, 10)
-    Wind7.setPosition(144, 10)
-    WIND_2.setFlag(SpriteFlag.BounceOnWall, true)
-    Wind2.setFlag(SpriteFlag.BounceOnWall, true)
-    Wind3.setFlag(SpriteFlag.BounceOnWall, true)
-    Wind4.setFlag(SpriteFlag.BounceOnWall, true)
-    Wind5.setFlag(SpriteFlag.BounceOnWall, true)
-    Wind6.setFlag(SpriteFlag.BounceOnWall, true)
-    Wind7.setFlag(SpriteFlag.BounceOnWall, true)
-    WIND_2.setVelocity(42, 69)
-    Wind2.setVelocity(21, 92)
-    Wind3.setVelocity(82, 26)
-    Wind4.setVelocity(87, 32)
-    Wind5.setVelocity(60, -76)
-    Wind6.setVelocity(79, 77)
-    Wind7.setVelocity(50, 76)
+    tiles.placeOnRandomTile(Air_Monster, myTiles.tile62)
 })
 info.onCountdownEnd(function () {
     Maze_Monster.follow(Bob, 84.5)
@@ -2099,7 +1793,6 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile138, function (sprite, locati
     WiseDude.setPosition(78, 103)
     WiseDude.say("You have completed your journey now greet the Queen and King and give them the Blob.", 80000)
     tiles.placeOnRandomTile(King, myTiles.tile27)
-    tiles.placeOnRandomTile(King, myTiles.tile8)
     tiles.placeOnRandomTile(Queen, myTiles.tile28)
     tiles.placeOnRandomTile(WiseDude, myTiles.tile45)
     tiles.placeOnRandomTile(Bob, myTiles.tile140)
